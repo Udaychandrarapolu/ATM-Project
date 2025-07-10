@@ -1,0 +1,16 @@
+{% extends 'atm_app/base.html' %}
+{% block content %}
+<div class="card mx-auto" style="max-width: 400px;">
+    <div class="card-body">
+        <h4 class="card-title text-center">Withdraw Money</h4>
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-warning w-100" type="submit">Withdraw</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
