@@ -9,4 +9,5 @@ urlpatterns = [
     path('withdraw/', views.withdraw_view, name='withdraw'),
     path('history/', views.transaction_history, name='history'),
     path('logout/', views.logout_view, name='logout'),
+    
 ]
